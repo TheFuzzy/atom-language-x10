@@ -1,0 +1,54 @@
+fileTypes: [
+  "x10"
+]
+name: "X10"
+patterns: [
+  {
+    match: "\\b(as|class|def|extends|haszero|implements|import|instanceof|interface|native|offers|package|struct|throws|operator)\\b"
+    name: "storage.type.x10"
+  }
+  {
+    match: "\\b(abstract|extern|final|global|nonblocking|pinned|private|property|protected|public|safe|sequential|shared|static|transient|val|var)\\b"
+    name: "storage.modifier.x10"
+  }
+  {
+    match: "//.+?$"
+    name: "comment.line.double-slash.x10"
+  }
+  {
+    begin: "/\\*"
+    end: "\\*/"
+    name: "comment.block.x10"
+  }
+  {
+    match: "\\b(assert|async|at|ateach|athome|atomic|break|case|catch|clocked|continue|default|do|else|finally|finish|for|if|in|next|offer|return|switch|throw|try|when|while)\\b"
+    name: "keyword.control.x10"
+  }
+  {
+    match: "\\b(new|super|this|self)\\b"
+    name: "constant.language.x10"
+  }
+  {
+    match: "\\b(false|null|true|here|void)\\b"
+    name: "constant.language.x10"
+  }
+  {
+    match: "\\b([0-9]+|0[xX][0-9a-fA-F]+)[LlNn]?\\b|\\b(([0-9]+[Ee][-]?[0-9]+|([0-9]*\\.[0-9]+|[0-9]+\\.)([Ee][-]?[0-9]+)?)[fFdD]?|[0-9]+[FfDd])"
+    name: "constant.numeric.x10"
+  }
+  {
+    begin: "\\'"
+    end: "\\'"
+    name: "string.quoted.single.x10"
+  }
+  {
+    begin: "\\\""
+    end: "\\\""
+    name: "string.quoted.dougle.x10"
+  }
+  {
+    match: "\\+|-|&|&&|\\||\\|\\||\\*|%|\\!"
+    name: "keyword.operator.x10"
+  }
+]
+scopeName: "source.x10"
